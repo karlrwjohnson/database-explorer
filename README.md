@@ -12,3 +12,28 @@ Other things it lacks:
   expected to have installed yourself. Mostly because I don't know how
   virtualenv works.
 - User management or authentication
+
+# Setup
+
+```
+virtualenv env
+env/bin/pip install flask glob2 yaml pg8000
+```
+
+Then, create a file called `env.yml`:
+
+```
+POSTGRES_CONNECTION_TYPE: 'socket'
+POSTGRES_DATABASE: 'database_name_here'
+POSTGRES_USER: 'username_here'
+```
+
+# Running
+
+```
+env/bin/python server.py
+```
+
+Then, open a web browser to http://localhost:5000
+
+
